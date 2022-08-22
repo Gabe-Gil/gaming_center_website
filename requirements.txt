@@ -4,4 +4,4 @@ gunicorn==20.1.0
 psycopg2-binary==2.9.3
 wheel==0.37.1
 whitenoise==6.0.0
-rest_framework
+djangorestframework==3.13.1
