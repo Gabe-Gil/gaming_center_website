@@ -3,4 +3,8 @@ Django==4.0.2
 gunicorn==20.1.0
 psycopg2-binary==2.9.3
 wheel==0.37.1
+<<<<<<< HEAD
 whitenoise==6.0.0
+=======
+whitenoise==6.0.0
+>>>>>>> 602b52265942aea25ae1f017c686afd5740abe98

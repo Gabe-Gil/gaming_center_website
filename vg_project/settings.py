@@ -152,4 +152,8 @@ DATABASES['default'].update(db_from_env)
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # The URL to use when referring to static files (where they will be served from)
+<<<<<<< HEAD
 STATIC_URL = '/static/'
+=======
+STATIC_URL = '/static/'
+>>>>>>> 602b52265942aea25ae1f017c686afd5740abe98
