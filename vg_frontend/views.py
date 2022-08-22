@@ -1,4 +1,3 @@
-from urllib import request
 from vg_api.models import Game
 from django.urls import reverse
 from vg_api import views, models

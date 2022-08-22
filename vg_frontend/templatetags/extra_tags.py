@@ -1,4 +1,3 @@
-from turtle import title
 from django import template
 from vg_frontend.models import Playthrough
 from vg_api.models import Game
