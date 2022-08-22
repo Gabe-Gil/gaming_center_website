@@ -5,3 +5,4 @@ psycopg2-binary==2.9.3
 wheel==0.37.1
 whitenoise==6.0.0
 djangorestframework==3.13.1
+django-crispy-forms==1.14.0
