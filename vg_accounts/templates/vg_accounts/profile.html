@@ -1,0 +1,40 @@
+{% extends "vg_frontend/base.html" %}
+{% load crispy_forms_tags %}
+{% load extra_tags %}
+
+{% block content %}
+    <center>
+        <div class="display-box">
+            <h1 class="mt-3">Username: {{ user.username }}</h1>
+            <h1 class="mt-3">Joined {{ user.date_joined|date:"M, d Y" }}</h1>
+            <div style="display: flex; align-items: baseline;" class="ml-5">
+                <fieldset class="collection-box">  
+                    <legend class="title-text">Favorites</legend>
+                        {% for game in user.profile.favorites.all|slice:":5" %}
+                            <div style="display: inline-block;">
+                                <a href="{% url 'game_detail' game.pk %}"><img src="{{ game.image_url }}" width="150rem" height="180rem" class="game-art ml-3 mr-3"></a>
+                                <h4 class="recent-label mt-3"><a class="label-link" href="{% url 'game_detail' game.pk %}">{{ game.title }}</a></h4> 
+                            </div>
+                        {% empty %}
+                            <h1 class="m-3">Add a game to your favorites!</h1>
+                        {% endfor %}
+                </fieldset>
+                <label class="p-3"><a href="{% url 'favorite_list' user.username %}">View All</a></label>
+            </div>
+            <div style="display: flex; align-items: baseline;" class="ml-5 mb-3">
+                <fieldset class="collection-box">  
+                    <legend class="title-text">Current Playthroughs</legend>
+                        {% for game in playthrough_list|find_u_play:user|slice:":5" %}
+                            <div style="display: inline-block;">
+                                <a href="{% url 'game_detail' game.game|find_game_link %}"><img src="{{ game.game|find_game_image }}" width="150rem" height="180rem" class="game-art ml-3 mr-3"></a>
+                                <h4 class="recent-label mt-3"><a class="label-link" href="{% url 'playthrough_update' game.id %}">{{ game.game }}<br>({{ game.playthrough_title }})</a></h4> 
+                            </div>
+                        {% empty %}
+                            <h1 class="m-3">No Current Playthroughs</h1>
+                        {% endfor %}
+                </fieldset>
+                <label class="p-3"><a href="{% url 'uncompleted_all' user.username %}">View All</a></label>
+            </div>
+        </div>
+    </center>
+{% endblock content %}}

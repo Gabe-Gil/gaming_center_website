@@ -1,0 +1,23 @@
+{% extends "vg_frontend/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<container class="container">
+    <div class="content-section form-box">
+        <form method="POST" class="p-3">
+            {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom">Log in</legend>
+                    {{ form|crispy }}
+                </fieldset>
+                <div class="form-group">
+                    <button class="btn btn-outline-info"type="submit">
+                        Log in
+                    </button>
+                </div>
+        </form>
+        <div class="border-top p-3">
+            <small>Need an account? <a class="ml-2" href="{% url 'register' %}">Sign up</a></small>
+        </div>
+    </div>
+</container>
+{% endblock content %}}

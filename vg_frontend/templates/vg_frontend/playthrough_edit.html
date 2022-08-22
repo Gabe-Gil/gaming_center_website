@@ -1,0 +1,29 @@
+{% extends "vg_frontend/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+        <div class="content-section box-form p-5">
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom" style="float: left;">
+                        Update Playthrough
+                    </legend>
+                    {{ form|crispy }}
+                </fieldset>
+                <div class="form-group">
+                    <center>
+                        <button class="btn-outline-info" type="Post">
+                            Update
+                        </button>
+                        <a class="ml-3" href="{% url 'playthrough_delete' object.id %}">
+                            Delete
+                        </a>
+                    </center>
+                    
+                </div>
+            </form>
+        </div>
+   
+{% endblock %}

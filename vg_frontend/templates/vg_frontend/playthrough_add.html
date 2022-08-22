@@ -1,0 +1,26 @@
+{% extends "vg_frontend/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+        <div class="content-section box-form p-5">
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4" style="float: left;">
+                        Add Playthrough
+                    </legend>
+                    {{ form|crispy }}
+                </fieldset>
+                <div class="form-group">
+                    <center>
+                        <button class="btn-outline-info" type="Post">
+                            Add Playthrough
+                        </button>
+                    </center>
+                    
+                </div>
+            </form>
+        </div>
+   
+{% endblock %}

@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'vg_frontend/main.css'%}">
+    <title>Test</title>
+</head>
+<body>
+    <div>
+        <ul class="nav-u-list">
+            <div class="nav-title mt-2"><center><h1><a href="{% url 'game_home' %}">Gaming Center</h1></a></center></div>
+            <div>
+                <form class="nav-search d-flex mt-3" method="GET" action="{% url 'search_page' %}">
+                    {% csrf_token %}
+                    <input name="search" type="search" class="form-control mr-3" placeholder="Search by title" aria-label="Search by title">
+                    <button class="btn btn-outline-secondary" type="submit">Search</button>
+                </form>
+            </div>
+            {% if user.is_authenticated %}
+            <li class="nav-line ms-auto" style="margin-right: 15vw"><a class="nav-item" href="{% url 'profile' user.username %}"">{{ user.username }}</a></li>
+            <li class="nav-line ms-auto"><a class="nav-item" href="{% url 'logout' %}">Log out</a></li>
+            <li class="nav-line ms-auto"><a class="nav-item" href="{% url 'collection' user.username %}">Collection</a></li>
+            <li class="nav-line ms-auto"><a class="nav-item" href="{% url 'all_games' %}">All Games</a></li>
+            {% else %}
+            <li class="nav-line ms-auto" style="margin-right: 15vw"><a class="nav-item" href="{% url 'register' %}">Sign up</a></li>
+            <li class="nav-line ms-auto"><a class="nav-item" href="{% url 'login' %}">Log in</a></li>
+            {% endif %}
+        </ul>
+    </div>
+    <main role="main" class="container">
+        <div>
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }} mt-3">
+                        {{ message }}
+                     </div>
+                {% endfor %}
+            {% endif %}
+            {% block content %}{% endblock %}
+        </div> 
+    </main>
+</body>
+</html>

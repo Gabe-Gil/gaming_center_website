@@ -1,0 +1,26 @@
+{% extends "vg_frontend/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="content-section box-form p-3" style="width: 30rem;">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom">
+                    Delete Playthrough
+                </legend>
+                <h4 class="p-3">Are you sure you want to delete "{{ object.game }} ({{ object.playthrough_title }})?"</h4>
+            </fieldset>
+            <div class="form-group">
+                <center>
+                    <button class="btn-outline-danger ml-3" type="Post" style="float: left; width: 30%;">
+                        Delete
+                    </button>
+                    <a href="{% url 'collection' user.username %}" style="float: right;" class="mr-5">
+                        Cancel
+                    </a>
+                </center>
+            </div>
+        </form>
+    </div>
+{% endblock %}
