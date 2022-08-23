@@ -11,7 +11,7 @@ class Playthrough(models.Model):
     
     titles.sort()
 
-    game = models.CharField(max_length=2000, choices=titles, default=titles[0])
+    #game = models.CharField(max_length=2000, choices=titles, default=titles[0])
     playthrough_title = models.CharField(max_length=200, default='Standard')
     completed = models.BooleanField(default=False)
     owner = models.ForeignKey(User, on_delete=models.CASCADE, default=None, blank=True, null=True)
