@@ -82,7 +82,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'vg_project.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
