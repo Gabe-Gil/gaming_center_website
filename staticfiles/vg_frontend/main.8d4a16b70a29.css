@@ -1,0 +1,245 @@
+.recent-box {
+    display: inline-block;
+    border: 0.3rem solid gray;
+    margin-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 1px 3px 8px;
+    border-radius: 1rem;
+    background-color: lightgray;
+    align-items: center;
+    vertical-align: top;
+    position: relative;
+}
+
+.collection-box {
+    display: inline-block;
+    border: 0.3rem solid #484848;
+    margin-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 1px 3px 8px;
+    background-color: gainsboro;
+    align-items: center;
+    vertical-align: top;
+    position: relative;
+}
+
+.display-box {
+    display: inline-grid;
+    border: 0.3rem solid gray;
+    margin-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 1px 3px 8px;
+    border-radius: 1rem;
+    position: relative;
+    align-items: flex-start;
+}
+
+.detail-box {
+    display: inline-grid;
+    border: 0.3rem solid gray;
+    margin-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 1px 3px 8px;
+    border-radius: 1rem;
+    position: relative;
+    align-items: flex-start;
+    width: 55rem;
+}
+
+.box-form {
+    border: 0.3rem solid gray;
+    margin-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 1px 3px 8px;
+    border-radius: 1rem;
+    width: 55rem;
+    display: flex;
+    margin: auto;
+    margin-top: 5rem;
+    width: 20rem;
+}
+
+.detail-image-box2 {
+    display: grid;
+    align-items: center;
+    flex-direction: row;
+}
+
+.detail-img {
+    display: inline-block;
+    vertical-align: bottom;
+    text-align: center;
+}
+
+.detail-img-text {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+.entry-border {
+    border-top: 0.1rem solid gray;
+    border-bottom: 0.1rem solid gray;
+    display: flex;
+}
+
+.entry-details {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.form-box {
+    border: solid 2px gray;
+    margin-left: 5rem;
+    width: 80%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 1rem;
+}
+
+.recent-label {
+    color: #484848;
+    font-size: 100%;
+}
+
+.home-tabs {
+    align-content: center;
+    display: inline-block;
+    border-radius: 1rem;
+}
+
+.tab {
+    border-radius: 0.5rem; 
+    width:49%; 
+    display:inline-block;
+}
+
+legend {
+    width: auto;
+    margin-left: 0.7rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.game-art {
+    border: 0.1rem solid black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@supports (-webkit-text-stroke: 2px black) {
+.title-text {
+    font-size: 3rem;
+    -webkit-text-stroke: 0.1rem black;
+    -webkit-text-fill-color: white; 
+} }
+
+.nav-u-list {
+    background-color: #303030;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.nav-title {
+    float: left;
+    margin-left: 16vw;
+    color: aliceblue;
+    overflow: hidden;
+}
+
+.nav-search {
+    float: left;
+    margin-left: 14vw;
+    color: aliceblue;
+    overflow: hidden;
+}
+
+.nav-line {
+    float: right;
+    overflow: hidden;
+    margin-right: auto;
+}
+
+.nav-item {
+    display: block;
+    padding: 1.3rem 1.3rem;
+    color: aliceblue;
+    text-align: center;
+    overflow: hidden;
+    font-size: 110%;
+}
+
+.label-link {
+    color: #484848;
+    text-align: center;
+}
+
+ul a:hover {
+    background-color: #202020;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+h4 a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.label-link:hover {
+    color: black;
+    text-decoration: none;
+}
+
+h1 a:hover {
+    text-decoration: none;
+    background-color: #303030;
+}
+
+h1 a {
+    color: aliceblue;
+}
+
+.search-form {
+    margin-top: 5rem;
+    border: 0.2rem solid gray;
+    display: inline-grid;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 1px 3px 8px;
+}
+
+.search-field {
+    margin-right: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 80%;
+}
+
+.grid-1-1 {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.grid-1-2 {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.grid-2-1 {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.grid-2-2 {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.grid-3-1 {
+    grid-row: 3;
+    grid-column: 1;
+}
+
+.grid-3-2 {
+    grid-row: 3;
+    grid-column: 2;
+}
+
+.search-button {
+    width: 30%;
+    height: 40%;
+    align-self: center;
+    margin-left: 5rem;
+}
