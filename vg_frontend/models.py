@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 class Playthrough(models.Model):
     titles = []
     game_list = []
-    #game_list = Game.objects.values_list('title', flat=True)
+    game_list = Game.objects.values_list('title', flat=True)
 
     if not game_list:
         game_list = ['None']
@@ -16,7 +16,7 @@ class Playthrough(models.Model):
     
     titles.sort()
 
-    #game = models.CharField(max_length=2000, choices=titles, default=titles[0])
+    game = models.CharField(max_length=2000, choices=titles, default=titles[0])
     playthrough_title = models.CharField(max_length=200, default='Standard')
     completed = models.BooleanField(default=False)
     owner = models.ForeignKey(User, on_delete=models.CASCADE, default=None, blank=True, null=True)
