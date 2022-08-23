@@ -6,12 +6,12 @@ from django.contrib.auth.models import User
 class Playthrough(models.Model):
     titles = ['temp', 'temp2']
 
-    #for i in Game.objects.values_list('title', flat=True):
-        #titles.append((i, i))
+    for i in Game.objects.values_list('title', flat=True):
+        titles.append((i, i))
     
     titles.sort()
 
-    #game = models.CharField(max_length=2000, choices=titles, default=titles[0])
+    game = models.CharField(max_length=2000, choices=titles, default=titles[0])
     playthrough_title = models.CharField(max_length=200, default='Standard')
     completed = models.BooleanField(default=False)
     owner = models.ForeignKey(User, on_delete=models.CASCADE, default=None, blank=True, null=True)
