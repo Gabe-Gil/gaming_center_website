@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-^ey+!_(8y3%@+!^x7%xe6h$zt0jyldcw7e!m-u8h%1zx$h6n71
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', 'localhost', '127.0.0.1:8000', 'django-gaming-center.herokuapp.com', '.herokuapp.com/']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1:8000', 'django-gaming-center.herokuapp.com', '.herokuapp.com/']
 
 # Application definition
 
@@ -53,7 +53,6 @@ REST_FRAMEWORK = {
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -141,10 +140,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_URL = 'vg_frontend/static/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = 'game_home'
-
-# Heroku: Update database configuration from $DATABASE_URL.
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
