@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^ey+!_(8y3%@+!^x7%xe6h$zt0jyldcw7e!m-u8h%1zx$h6n71'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # settings.py
 LOGGING = {
@@ -61,7 +61,7 @@ LOGGING = {
     }
 }
 
-ALLOWED_HOSTS = ['*', 'https://django-gaming-center.herokuapp.com/', 'django-gaming-center.herokuapp.com']
+ALLOWED_HOSTS = ['*', 'https://django-gaming-center.herokuapp.com/', 'django-gaming-center.herokuapp.com', 'https://django-gaming-center.herokuapp.com/']
 
 # Application definition
 
