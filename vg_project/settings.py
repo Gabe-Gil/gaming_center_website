@@ -61,7 +61,7 @@ LOGGING = {
     }
 }
 
-ALLOWED_HOSTS = ['https://dry-lowlands-19953.herokuapp.com/', 'dry-lowlands-19953.herokuapp.com']
+ALLOWED_HOSTS = ['https://django-gaming-center.herokuapp.com/']
 
 # Application definition
 
