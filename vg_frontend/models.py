@@ -5,8 +5,12 @@ from django.contrib.auth.models import User
 # Create your models here.
 class Playthrough(models.Model):
     titles = []
+    game_list = Game.objects.values_list('title', flat=True)
 
-    for i in Game.objects.values_list('title', flat=True):
+    if not game_list:
+        game_list = ['None']
+
+    for i in game_list:
         titles.append((i, i))
     
     titles.sort()
