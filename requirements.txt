@@ -21,10 +21,6 @@ chardet==4.0.0
 charset-normalizer==2.0.12
 cryptography==37.0.4
 cycler==0.11.0
-discord==1.7.3
-discord.py==1.7.3
-dj-database-url==1.0.0
-Django==4.0.6
 django-crispy-forms==1.14.0
 django-filter==22.1
 django-heroku==0.3.1
