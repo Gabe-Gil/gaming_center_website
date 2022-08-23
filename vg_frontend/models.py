@@ -4,10 +4,10 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Playthrough(models.Model):
-    titles = []
+    titles = ['temp', 'temp2']
 
-    for i in Game.objects.values_list('title', flat=True):
-        titles.append((i, i))
+    #for i in Game.objects.values_list('title', flat=True):
+        #titles.append((i, i))
     
     titles.sort()
 
