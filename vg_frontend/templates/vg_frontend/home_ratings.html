@@ -20,6 +20,13 @@
                         </div>
                     </div>
                 </fieldset>
+            {% empty %}
+            <fieldset class="recent-box">  
+                <legend class="title-text">Featured</legend>
+                <div style="overflow: auto; width: 55rem;">
+                    <h1>No Games Available</h1>
+                </div>
+            </fieldset>
             {% endfor %}
         </div>
         <div class="display-box" style="margin-top: 7rem;">
