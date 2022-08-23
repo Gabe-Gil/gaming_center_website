@@ -61,7 +61,7 @@ LOGGING = {
     }
 }
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1:8000', 'django-gaming-center.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1:8000', 'django-gaming-center.herokuapp.com', '.herokuapp.com/', '*']
 
 # Application definition
 
