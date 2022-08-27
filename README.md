@@ -6,6 +6,7 @@ A website that has a REST api which allows users to create, read, update, and de
 
 * [Django](https://www.djangoproject.com/) - The web framework used
 * [Django REST Api](https://www.django-rest-framework.org/) - The api framework used
+* [PostgreSQL](https://www.postgresql.org/) - Database used
 
 ## License
 
